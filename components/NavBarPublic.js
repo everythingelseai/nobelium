@@ -21,13 +21,13 @@ export function NavBarPublic() {
       <>
         <Link
           className="whitespace-nowrap text-sm font-medium text-tcotta-700 underline-offset-4 hover:underline"
-          href="/"
+          href="https://www.scammerblock.com/"
         >
           Home
         </Link>
         <Link
           className="whitespace-nowrap text-sm font-medium text-tcotta-700 underline-offset-4 hover:underline"
-          href="/about"
+          href="https://www.scammerblock.com/about"
         >
           Team
         </Link>
@@ -39,17 +39,17 @@ export function NavBarPublic() {
         </Link>
         <Link
           className="whitespace-nowrap text-sm font-medium text-tcotta-700 underline-offset-4 hover:underline"
-          href="/verify-call"
+          href="https://www.scammerblock.com/verify-call"
         >
           Verify Call
         </Link>
         <Link
           className="whitespace-nowrap text-sm font-medium text-tcotta-700 underline-offset-4 hover:underline"
-          href="/login"
+          href="https://www.scammerblock.com/login"
         >
           Log In
         </Link>
-        <Link href="/register">
+        <Link href="https://www.scammerblock.com/register">
           <Button>Setup for free</Button>
         </Link>
       </>

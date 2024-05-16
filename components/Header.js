@@ -111,22 +111,26 @@ export default function Header({ navBarTitle, fullWidth }) {
           />
         </svg>
         <div className="flex items-center">
-          <Link href="/" aria-label={BLOG.title}>
+          <Link
+            className="flex flex-row items-center align-middle"
+            href="https://www.scammerblock.com"
+            aria-label={BLOG.title}
+          >
             <Image
+              className=""
               src={favicon}
               width={24}
               height={24}
               alt={BLOG.title}
               onError={() => setFavicon(true)}
             />
+            <HeaderName
+              ref={titleRef}
+              siteTitle={BLOG.title}
+              siteDescription={BLOG.description}
+              postTitle={navBarTitle}
+            />
           </Link>
-          <HeaderName
-            ref={titleRef}
-            siteTitle={BLOG.title}
-            siteDescription={BLOG.description}
-            postTitle={navBarTitle}
-            onClick={handleClickHeader}
-          />
         </div>
         <NavBar />
       </div>
@@ -144,12 +148,12 @@ const HeaderName = forwardRef(function HeaderName(
       className="header-name ml-2 font-medium text-gray-600 dark:text-gray-300 capture-pointer-events grid-rows-1 grid-cols-1 items-center"
       onClick={onClick}
     >
-      {postTitle && (
-        <span className="post-title row-start-1 col-start-1">{postTitle}</span>
-      )}
+      <span className="post-title row-start-1 col-start-1">
+        {postTitle ?? ""}
+      </span>
       <span className="row-start-1 col-start-1">
-        <span className="site-title">{siteTitle}</span>
-        <span className="site-description font-normal">
+        <span className="site-title align-middle">{siteTitle}</span>
+        <span className="site-description font-normal align-middle">
           , {siteDescription}
         </span>
       </span>
